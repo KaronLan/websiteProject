@@ -1,10 +1,12 @@
 import React from 'react';
 import './App.css';
+import Searchbar from './Components/Searchbar';
+import TickerData from './constituents_json.json'
 
 function App() {
   return (
     <div className="App">
-     <h1>Banana</h1>
+     <Searchbar placeholder={"Enter a ticker..."} data = {TickerData}/>
     </div>
   );
 }
