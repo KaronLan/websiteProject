@@ -9,12 +9,14 @@
       name="description"
       content="Web site created using create-react-app"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!-- <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" /> -->
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <!-- <link rel="manifest" href="%PUBLIC_URL%/manifest.json" /> -->
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -39,5 +41,19 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <div class="top-row">
+      <button type="button" class="nav-btn">
+        <span class="material-icons">
+          menu
+        </span>
+      </button>
+      <img class="logo" src="./Veggie Basket.png" alt="decode">
+    </div>
+    <div class="nav-overlay"></div>
+    <nav class="nav">
+      <a href="#" class=""nav-link">Nav Item 1</a>
+      <a href="#" class=""nav-link">Nav Item 2</a>
+      <a href="#" class=""nav-link">Nav Item 3</a>
+    </nav>
   </body>
 </html>
