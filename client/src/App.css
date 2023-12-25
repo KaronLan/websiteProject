@@ -1,38 +1,92 @@
 .App {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  background-image: linear-gradient();
+  background: rgb(224,244,255);
+  /* background-image: linear-gradient(90deg, rgba(224,244,255,1) 100%); rgba(135,196,255,1) 25%, rgba(57,167,255,1) 50%, rgba(255,238,217,1) 85% */
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body{
+  --top-row-height: 35px;
+  padding: 0;
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.top-row{
+  position:fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--top-row-height);
   display: flex;
-  flex-direction: column;
+  background-color: white;
+  
+}
+.logo{
+  height: 90%;
+  display: block;
+}
+.nav-btn{
+  width: var(--top-row-height);
+  height: 100%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background: none;
+  outline: none;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+/*material icons*/
+.nav-btn > span{
+color:rgb(135,196,255); 
+font-size: calc(var(--top-row-height)/1.5);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav{
+  --nav-width: 200px;
+
+  position: fixed;
+  top:0;
+  left: 0;
+  width: var(--nav-width);
+  height: 100vh;
+  background-color: white;
+  transform: translateX(calc(-1*var(--nav-width)));
+  transition: transform 0.25s;
+}
+
+.nav-open{
+  transform: translateX(0);
+}
+
+.nav-link{
+  display: block;
+  font-family: 'Lucida Sans';
+  font-size: 20px;
+  padding: 32px;
+  color: black;
+}
+
+.nav-link:hover{
+  background: rgba(0,0,0,0.05);
+}
+
+.nav-overlay{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.3);
+}
+
+.nav-overlay-open{
+  display: block;
 }

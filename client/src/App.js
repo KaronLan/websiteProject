@@ -1,18 +1,17 @@
 import React from 'react';
-import Navbar from './components/Navbar';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './App.css';
+import Searchbar from './components/Searchbar';
+import TickerData from './constituents_json.json'
 
 function App() {
   return (
     <>
-    <Router>
-      <Navbar />
-      <Routes>
-        <Route path="/" exact />  //home components
-      </Routes>
-    </Router>
+    <div className="App">
+     <Searchbar placeholder={"Enter a ticker..."} data = {TickerData}/>
+    </div>
     </>
+    
   );
 }
 
